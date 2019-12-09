@@ -423,6 +423,7 @@
                           <div class="form-group">
                             <label> Hình Ảnh </label>
                             <div>
+                            <?php ?>
                             <img src="<?php echo $kq['hinhanh']; ?>">      
                             </div>
                             <input type="file" name="image" class="file-upload-default">
