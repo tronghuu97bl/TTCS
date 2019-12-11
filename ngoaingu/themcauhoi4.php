@@ -23,8 +23,8 @@
       <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="homepage.php"><img src="../assets/images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="homepage.php"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="../homepage.php"><img src="../assets/images/logo.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="../homepage.php"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -172,154 +172,163 @@
       <div class="container-fluid page-body-wrapper">
         <!-- partial:../../partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                  <img src="../assets/images/faces/face1.jpg" alt="profile">
-                  <span class="login-status online"></span>
-                  <!--change to offline or busy as needed-->
+            <ul class="nav">
+              <li class="nav-item nav-profile">
+                <a href="#" class="nav-link">
+                  <div class="nav-profile-image">
+                    <img src="../assets/images/faces/face1.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                    <!--change to offline or busy as needed-->
+                  </div>
+                  <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">Tư Mã Trọng Đạt</span>
+                    <span class="text-secondary text-small">Project Manager</span>
+                  </div>
+                  <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../homepage.php">
+                  <span class="menu-title">Dashboard</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+                  <span class="menu-title">Quản Lý Người Dùng</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-medical-bag menu-icon"></i>
+                </a>
+                <div class="collapse" id="general-pages">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../ql_nguoidung/taikhoan.php"> Tài Khoản Người Dùng </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../ql_nguoidung/bainop.php"> Các Bài Nộp </a></li>
+                  </ul>
                 </div>
-                <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">Tư Mã Trọng Đạt</span>
-                  <span class="text-secondary text-small">Project Manager</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="">
+                  <span class="menu-title">Toán Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic1">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qldethi1.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
                 </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../homepage.php">
-                <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                <span class="menu-title">Quản Lý Người Dùng</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-medical-bag menu-icon"></i>
-              </a>
-              <div class="collapse" id="general-pages">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../ql_nguoidung/taikhoan.php"> Tài Khoản Người Dùng </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../ql_nguoidung/bainop.php"> Các Bài Nộp </a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="">
-                <span class="menu-title">Toán Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic1">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="">
-                <span class="menu-title">Vật Lý</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic2">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../vatli/qlch2.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../vatli/themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../vatli/taodethi2.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic3">
-                <span class="menu-title">Hóa Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic3">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
-                <span class="menu-title">Ngoại Ngữ</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic4">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="qlch4.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="taodethi4.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic5" aria-expanded="false" aria-controls="ui-basic5">
-                <span class="menu-title">Sinh Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic5">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
-                <span class="menu-title">Lịch Sử</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic6">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic7" aria-expanded="false" aria-controls="ui-basic7">
-                <span class="menu-title">Địa Lý</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic7">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic8" aria-expanded="false" aria-controls="ui-basic8">
-                <span class="menu-title">GDCD</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic8">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="">
+                  <span class="menu-title">Vật Lý</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic2">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/qldethi2.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/qlch2.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/taodethi2.php">Tạo Mới Đề Thi</a></li>
+
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic3">
+                  <span class="menu-title">Hóa Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic3">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/qldethi3.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
+                  <span class="menu-title">Ngoại Ngữ</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic4">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="qldethi4.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="qlch4.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="taodethi4.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic5" aria-expanded="false" aria-controls="ui-basic5">
+                  <span class="menu-title">Sinh Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic5">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qldethi5.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
+                  <span class="menu-title">Lịch Sử</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic6">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/qldethi6.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic7" aria-expanded="false" aria-controls="ui-basic7">
+                  <span class="menu-title">Địa Lý</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic7">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../diali/qldethi7.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic8" aria-expanded="false" aria-controls="ui-basic8">
+                  <span class="menu-title">GDCD</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic8">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/qldethi8.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -339,6 +348,99 @@
             </div>
 
             <!-- thêm mới nội dung vào đây -->
+            <div class="row">
+              <div class="col-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Form Thêm Mới Câu Hỏi</h4>
+                    <p class="card-description"> Môn Vật Lý </p>
+                    <form class="forms-sample" method="post" action="xuli_add_cauhoi.php" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <label for="exampleInputName1">Nội Dung Câu Hỏi</label>
+                        <input type="text" name="noidung" class="form-control" id="exampleInputName1" placeholder="Nhập nội dung câu hỏi">
+                        <?php if(isset($_GET['nd'])){ ?>
+                          <span class="text-danger"><?= $_GET['nd'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName2">Phương Án A</label>
+                        <input type="text" name="dapana" class="form-control" id="exampleInputName2" placeholder="Nhập phương án A">
+                        <?php if(isset($_GET['a'])){ ?>
+                          <span class="text-danger"><?= $_GET['a'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName3">Phương Án B</label>
+                        <input type="text" name="dapanb" class="form-control" id="exampleInputName3" placeholder="Nhập phương án B">
+                        <?php if(isset($_GET['b'])){ ?>
+                          <span class="text-danger"><?= $_GET['b'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName4">Phương Án C</label>
+                        <input type="text" name="dapanc" class="form-control" id="exampleInputName4" placeholder="Nhập phương án C">
+                        <?php if(isset($_GET['c'])){ ?>
+                          <span class="text-danger"><?= $_GET['c'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName5">Phương Án D</label>
+                        <input type="text" name="dapand" class="form-control" id="exampleInputName5" placeholder="Nhập phương án D">
+                        <?php if(isset($_GET['d'])){ ?>
+                          <span class="text-danger"><?= $_GET['d'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectGender">Phương Án Đúng</label>
+                        <select class="form-control" name="dapandung" id="exampleSelectGender">
+                          <option value="1"> Phương án A</option>
+                          <option value="2"> Phương án B</option>
+                          <option value="3"> Phương án C</option>
+                          <option value="4"> Phương án D</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectGender">Độ Khó Câu Hỏi</label>
+                        <select class="form-control" name="dokho" id="exampleSelectGender">
+                          <option value="1"> Nhận Biết</option>
+                          <option value="2"> Thông Hiểu</option>
+                          <option value="3"> Vận Dụng Thấp</option>
+                          <option value="4"> Vận Dụng Cao</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleSelectGender">Loại Câu Hỏi</label>
+                        <select class="form-control" name="loaicau" id="exampleSelectGender">
+                          <option value="1"> Ngữ Âm</option>
+                          <option value="2"> Ngữ Pháp - Từ Vựng</option>
+                          <option value="3"> Giao Tiếp </option>
+                          <option value="4"> Kỹ Năng Đọc</option>
+                          <option value="5"> Kỹ Năng Viết</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>Upload Hình Ảnh (Nếu Có)</label>
+                        <br>
+                        <img src="../img/default.jpg" alt="" style="max-width:220px;" id="showImage">
+                        <br>
+                        <input type="file" name="image" class="file-upload-default">
+                        <div class="input-group col-xs-12">
+                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                          <span class="input-group-append">
+                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
+                          </span>                             
+                        </div>  
+                        <?php if(isset($_GET['i'])){ ?>
+                          <span class="text-danger"><?= $_GET['i'] ?></span>
+                        <?php } ?>
+                      </div>
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
+                      <button type="reset" class="btn btn-light">Cancel</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div> 
    
           </div>
           <!-- content-wrapper ends -->
@@ -367,6 +469,17 @@
     <script src="../assets/js/misc.js"></script>
     <!-- endinject -->
     <!-- Custom js for this page -->
+    <script src="../assets/js/file-upload.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  
+    <script type="text/javascript">
+    
+      <?php if(isset($_GET['success']) && $_GET['success'] == true){ ?> 
+        swal('Thêm mới câu hỏi thành công.');
+      <?php }else if(isset($_GET['notsuccess']) && $_GET['notsuccess'] == true){ ?>
+        swal('Thêm mới câu hỏi không thành công!!!.');
+      <?php } ?>
+    </script>
     <!-- End custom js for this page -->
   </body>
 </html>

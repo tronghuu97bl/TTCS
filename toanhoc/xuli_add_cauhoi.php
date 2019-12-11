@@ -53,7 +53,7 @@ if ($path != "") {
     $ext = strtolower(pathinfo($path, PATHINFO_EXTENSION));//lấy phần đuôi của ảnh được chọn
     $allowed = array("jpeg","jpg","png");//các đuôi ảnh cho phép
     
-    $filename = "img/" . uniqid() . "." . $ext; //tạo ra tên file duy nhất cho ảnh
+    $filename = "img/toanhoc/" . uniqid() . "." . $ext; //tạo ra tên file duy nhất cho ảnh
 
     // if($path == ""){
     //     $i ='i=Chọn ảnh cho khóa học&&';

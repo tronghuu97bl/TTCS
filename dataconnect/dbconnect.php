@@ -8,7 +8,6 @@
     
     define('SITE_URL','http://localhost:8080/ttcs/');
     $ADMIN_URL = "http://localhost:8080/ttcs/";
-    $ADMIN_ASSET_URL = "http://localhost:8080/ttcs/AdminLTE/AdminLTE-2.4.10/";
 
     function getSimpleQuery($sql, $isAll = false){ //hàm truy vấn csdl $sql là câu lệnh truy vấn, $isall là có là fetchALL hay k? nếu có thì mặc định kiểu là PDO::FETCH_BOTH (default): Trả về dữ liệu dạng mảng với key là tên của column và cả số thứ tự của column
         global $conn; //biến kết nối toàn cục

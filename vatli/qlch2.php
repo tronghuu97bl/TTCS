@@ -238,6 +238,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic1">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qldethi1.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
@@ -252,9 +253,11 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic2">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="qldethi2.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="qlch2.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="taodethi2.php">Tạo Mới Đề Thi</a></li>
+
                   </ul>
                 </div>
               </li>
@@ -266,6 +269,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic3">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/qldethi3.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
@@ -280,6 +284,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic4">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../ngoaingu/qldethi4.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/qlch4.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/taodethi4.php">Tạo Mới Đề Thi</a></li>
@@ -294,6 +299,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic5">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qldethi5.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
@@ -308,6 +314,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic6">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/qldethi6.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
@@ -322,6 +329,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic7">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../diali/qldethi7.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
@@ -336,6 +344,7 @@ $STT=1*($current_page-1)*20 + 1;
                 </a>
                 <div class="collapse" id="ui-basic8">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/qldethi8.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
@@ -367,10 +376,10 @@ $STT=1*($current_page-1)*20 + 1;
                   <div class="col-md-12 grid-margin stretch-card">
                     <div class="card">
                       <div class="card-body">
-                        <h4 class="card-title">Danh Sách Đề Thi</h4>
+                        <h4 class="card-title">Danh Sách Câu Hỏi</h4>
                         <div class="table-responsive">
 
-                          <table class="table-bordered" width="1220" >
+                          <table class="table-bordered" width=device-width >
                             <nav aria-label="...">
                               <ul class="pagination">
                                 <?php
@@ -395,8 +404,8 @@ $STT=1*($current_page-1)*20 + 1;
                             </nav>
                             <thead>
                               <tr>
-                                <th> # </th>
-                                <th> Nội Dung </th>
+                                <th> STT </th>
+                                <th> Nội Dung Câu Hỏi</th>
                                 <th> Ngày Thêm </th>
                                 <th> Độ Khó </th>
                                 <th> Sửa </th>
@@ -406,10 +415,10 @@ $STT=1*($current_page-1)*20 + 1;
                             <tbody>
                               <?php foreach ($kq as $key): ?>
                                 <tr>
-                                  <td width="30"> <?= $STT++ ?> </td>
-                                  <td width="" > <?= $key['cauhoi'] ?> </td>
-                                  <td width="100"> <?= $key['ngaythem'] ?> </td>
-                                  <td width="50">
+                                  <td width="40"> <?= $STT++ ?> </td>
+                                  <td> <?= $key['cauhoi'] ?> </td>
+                                  <td width="100px"> <?= $key['ngaythem'] ?> </td>
+                                  <td width="100px">
                                     <?php $dokho;
                                     if ($key['dokho']==1) {
                                       $dokho=25;
@@ -428,8 +437,8 @@ $STT=1*($current_page-1)*20 + 1;
                                       <div class="progress-bar bg-gradient-success" role="progressbar" style="width: <?= $dokho?>%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                   </td>
-                                  <td width="10"><button type="button" class="btn-sm btn-gradient-primary btn-rounded btn-fw" onclick="location.href='http://localhost:8080/ttcs/vatli/edit_cauhoi.php?id=<?= $key['id_cauhoi'] ?>'" >Sửa</button></td>
-                                  <td width="10"> <button class="btn-sm btn-gradient-primary btn-rounded btn-fw btn-remove" href="javascript:;" linkurl="http://localhost:8080/ttcs/vatli/delete_cauhoi.php?id=<?= $key['id_cauhoi'] ?>'">xóa</button> </td>
+                                  <td width="30px"><button type="button" class="btn-sm btn-gradient-primary btn-rounded btn-fw" onclick="location.href='<?= $ADMIN_URL?>vatli/edit_cauhoi.php?id=<?= $key['id_cauhoi']?>&&page=<?=$current_page?>'" >Sửa</button></td>
+                                  <td width="30px"> <button class="btn-sm btn-gradient-primary btn-rounded btn-fw btn-remove" href="javascript:;" linkurl="<?= $ADMIN_URL?>vatli/delete_cauhoi.php?id=<?= $key['id_cauhoi']?>&&page=<?=$current_page?>'">xóa</button> </td>
                                 </tr>
 
                               <?php endforeach ?>    
@@ -492,6 +501,30 @@ $STT=1*($current_page-1)*20 + 1;
         <script src="../assets/js/off-canvas.js"></script>
         <script src="../assets/js/hoverable-collapse.js"></script>
         <script src="../assets/js/misc.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+          <?php if(isset($_GET['editsuccess']) && $_GET['editsuccess'] == true){ ?> 
+            swal('Thay đổi thông tin câu hỏi thành công.');
+          <?php } ?>
+          <?php if(isset($_GET['deletesuccess']) && $_GET['deletesuccess'] == true){ ?> 
+            swal('Xóa câu hỏi thành công.');
+          <?php } ?>
+          $('.btn-remove').on('click', function(){
+            swal({
+              title: "Cảnh báo!",
+              text: "Bạn có chắc chắn muốn xoá danh mục này ?",
+              icon: "warning",
+              buttons: true,
+              dangerMode: true,
+            })
+            .then((willDelete) => {
+              if (willDelete) {
+                window.location.href = $(this).attr('linkurl');
+              }
+            });
+          });    
+        </script>
+
         <!-- endinject -->
         <!-- Custom js for this page -->
         <!-- End custom js for this page -->

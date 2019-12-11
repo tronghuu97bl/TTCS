@@ -1,3 +1,79 @@
+<?php 
+$path = "../";
+require_once 'dataconnect/dbconnect.php';
+  // tìm tổng số người dùng
+$sql = "SELECT count(id_user) as total FROM users";
+$run = getSimpleQuery($sql);
+$total_users = $run['total'];
+// số câu hỏi toán
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_toan";
+$run = getSimpleQuery($sql);
+$total_ch_toan = $run['total'];
+// số câu hỏi lý
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_ly";
+$run = getSimpleQuery($sql);
+$total_ch_ly = $run['total'];
+// số câu hỏi hóa
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_hoa";
+$run = getSimpleQuery($sql);
+$total_ch_hoa = $run['total'];
+// số câu hỏi sinh
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_sinh";
+$run = getSimpleQuery($sql);
+$total_ch_sinh = $run['total'];
+// số câu hỏi anh
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_ta";
+$run = getSimpleQuery($sql);
+$total_ch_anh = $run['total'];
+// số câu hỏi sử
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_ls";
+$run = getSimpleQuery($sql);
+$total_ch_ls = $run['total'];
+// số câu hỏi địa
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_dia";
+$run = getSimpleQuery($sql);
+$total_ch_dia = $run['total'];
+// số câu hỏi cd
+$sql = "SELECT count(id_cauhoi) as total FROM cauhoi_gdcd";
+$run = getSimpleQuery($sql);
+$total_ch_gdcd = $run['total'];
+
+$total_ch = $total_ch_anh + $total_ch_dia +$total_ch_gdcd +$total_ch_hoa +$total_ch_ls + $total_ch_ly +$total_ch_sinh +$total_ch_toan;
+//
+$sql = "SELECT count(id_de) as total FROM de_toan";
+$run = getSimpleQuery($sql);
+$detoan = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_ly";
+$run = getSimpleQuery($sql);
+$dely = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_hoa";
+$run = getSimpleQuery($sql);
+$dehoa = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_sinh";
+$run = getSimpleQuery($sql);
+$desinh = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_ta";
+$run = getSimpleQuery($sql);
+$deta = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_ls";
+$run = getSimpleQuery($sql);
+$dels = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_dia";
+$run = getSimpleQuery($sql);
+$dedia = $run['total'];
+//
+$sql = "SELECT count(id_de) as total FROM de_gdcd";
+$run = getSimpleQuery($sql);
+$degdcd = $run['total'];
+
+$total_de = $dedia + $degdcd + $dehoa + $dels + $dely + $deta + $desinh + $detoan;
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -174,154 +250,163 @@
       <div class="container-fluid page-body-wrapper">
         <!-- partial:../../partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-          <ul class="nav">
-            <li class="nav-item nav-profile">
-              <a href="#" class="nav-link">
-                <div class="nav-profile-image">
-                  <img src="assets/images/faces/face1.jpg" alt="profile">
-                  <span class="login-status online"></span>
-                  <!--change to offline or busy as needed-->
+            <ul class="nav">
+              <li class="nav-item nav-profile">
+                <a href="#" class="nav-link">
+                  <div class="nav-profile-image">
+                    <img src="assets/images/faces/face1.jpg" alt="profile">
+                    <span class="login-status online"></span>
+                    <!--change to offline or busy as needed-->
+                  </div>
+                  <div class="nav-profile-text d-flex flex-column">
+                    <span class="font-weight-bold mb-2">Tư Mã Trọng Đạt</span>
+                    <span class="text-secondary text-small">Project Manager</span>
+                  </div>
+                  <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="homepage.php">
+                  <span class="menu-title">Dashboard</span>
+                  <i class="mdi mdi-home menu-icon"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
+                  <span class="menu-title">Quản Lý Người Dùng</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-medical-bag menu-icon"></i>
+                </a>
+                <div class="collapse" id="general-pages">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="ql_nguoidung/taikhoan.php"> Tài Khoản Người Dùng </a></li>
+                    <li class="nav-item"> <a class="nav-link" href="ql_nguoidung/bainop.php"> Các Bài Nộp </a></li>
+                  </ul>
                 </div>
-                <div class="nav-profile-text d-flex flex-column">
-                  <span class="font-weight-bold mb-2">Tư Mã Trọng Đạt</span>
-                  <span class="text-secondary text-small">Project Manager</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false" aria-controls="">
+                  <span class="menu-title">Toán Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic1">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="toanhoc/qldethi1.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
                 </div>
-                <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="homepage.php">
-                <span class="menu-title">Dashboard</span>
-                <i class="mdi mdi-home menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages">
-                <span class="menu-title">Quản Lý Người Dùng</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-medical-bag menu-icon"></i>
-              </a>
-              <div class="collapse" id="general-pages">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="ql_nguoidung/taikhoan.php"> Tài Khoản Người Dùng </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="ql_nguoidung/bainop.php"> Các Bài Nộp </a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic1" aria-expanded="false"aria-controls="ui-basic1">
-                <span class="menu-title">Toán Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic1">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic2">
-                <span class="menu-title">Vật Lý</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic2">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item3"> <a class="nav-link" href="vatli/qlch2.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item3"> <a class="nav-link" href="vatli/themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item3"> <a class="nav-link" href="vatli/taodethi2.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic3">
-                <span class="menu-title">Hóa Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic3">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
-                <span class="menu-title">Ngoại Ngữ</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic4">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="ngoaingu/qlch4.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="ngoaingu/themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="ngoaingu/taodethi4.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic5" aria-expanded="false" aria-controls="ui-basic5">
-                <span class="menu-title">Sinh Học</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic5">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
-                <span class="menu-title">Lịch Sử</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic6">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic7" aria-expanded="false" aria-controls="ui-basic7">
-                <span class="menu-title">Địa Lý</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic7">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic8" aria-expanded="false" aria-controls="ui-basic8">
-                <span class="menu-title">GDCD</span>
-                <i class="menu-arrow"></i>
-                <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-              </a>
-              <div class="collapse" id="ui-basic8">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="">
+                  <span class="menu-title">Vật Lý</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic2">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="vatli/qldethi2.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="vatli/qlch2.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="vatli/themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="vatli/taodethi2.php">Tạo Mới Đề Thi</a></li>
+
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic3" aria-expanded="false" aria-controls="ui-basic3">
+                  <span class="menu-title">Hóa Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic3">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="hoahoc/qldethi3.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic4" aria-expanded="false" aria-controls="ui-basic4">
+                  <span class="menu-title">Ngoại Ngữ</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic4">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="ngoaingu/qldethi4.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="ngoaingu/qlch4.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="ngoaingu/themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="ngoaingu/taodethi4.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic5" aria-expanded="false" aria-controls="ui-basic5">
+                  <span class="menu-title">Sinh Học</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic5">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="sinhhoc/qldethi5.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic6" aria-expanded="false" aria-controls="ui-basic6">
+                  <span class="menu-title">Lịch Sử</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic6">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="lichsu/qldethi6.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic7" aria-expanded="false" aria-controls="ui-basic7">
+                  <span class="menu-title">Địa Lý</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic7">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="diali/qldethi7.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#ui-basic8" aria-expanded="false" aria-controls="ui-basic8">
+                  <span class="menu-title">GDCD</span>
+                  <i class="menu-arrow"></i>
+                  <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+                </a>
+                <div class="collapse" id="ui-basic8">
+                  <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="gdcd/qldethi8.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </nav>
         <!-- partial -->
         <div class="main-panel">
           <div class="content-wrapper">
@@ -347,7 +432,7 @@
                     <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                     <h4 class="font-weight-normal mb-3">Số Người Dùng<i class="mdi mdi-chart-line mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">$ 15,0000</h2>
+                    <h1 class="mb-5"><?php echo $total_users; ?></h1>
                     <h6 class="card-text">Increased by 60%</h6>
                   </div>
                 </div>
@@ -358,7 +443,7 @@
                     <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                     <h4 class="font-weight-normal mb-3">Số Câu Hỏi<i class="mdi mdi-bookmark-outline mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">45,6334</h2>
+                    <h1 class="mb-5"><?php echo $total_ch; ?></h1>
                     <h6 class="card-text">Decreased by 10%</h6>
                   </div>
                 </div>
@@ -369,7 +454,7 @@
                     <img src="assets/images/dashboard/circle.svg" class="card-img-absolute" alt="circle-image" />
                     <h4 class="font-weight-normal mb-3">Số Đề Thi<i class="mdi mdi-diamond mdi-24px float-right"></i>
                     </h4>
-                    <h2 class="mb-5">95,5741</h2>
+                    <h2 class="mb-5"><?php echo $total_de; ?></h2>
                     <h6 class="card-text">Increased by 5%</h6>
                   </div>
                 </div>
@@ -395,57 +480,57 @@
                         <tbody>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-primary btn-rounded btn-fw">Toán Học</button></td>
-                            <td><button type="button" class="btn btn-outline-primary btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-primary btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-primary btn-fw"><?=$total_ch_toan ?></button></td>
+                            <td><button type="button" class="btn btn-outline-primary btn-fw"><?=$detoan ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-secondary btn-rounded btn-fw">Hóa Học</button></td>
-                            <td><button type="button" class="btn btn-outline-secondary btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-secondary btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-secondary btn-fw"><?=$total_ch_hoa ?></button></td>
+                            <td><button type="button" class="btn btn-outline-secondary btn-fw"><?=$dehoa ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-success btn-rounded btn-fw">Vật Lý </button></td>
-                            <td><button type="button" class="btn btn-outline-success btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-success btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-success btn-fw"><?=$total_ch_ly ?></button></td>
+                            <td><button type="button" class="btn btn-outline-success btn-fw"><?=$dely ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-danger btn-rounded btn-fw">Sinh Học</button></td>
-                            <td><button type="button" class="btn btn-outline-danger btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-danger btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-danger btn-fw"><?=$total_ch_sinh ?></button></td>
+                            <td><button type="button" class="btn btn-outline-danger btn-fw"><?=$desinh ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-warning btn-rounded btn-fw">Ngoại Ngữ </button></td>
-                            <td><button type="button" class="btn btn-outline-warning btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-warning btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-warning btn-fw"><?=$total_ch_anh ?></button></td>
+                            <td><button type="button" class="btn btn-outline-warning btn-fw"><?=$deta ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-info btn-rounded btn-fw">Lịch Sử </button></td>
-                            <td><button type="button" class="btn btn-outline-info btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-info btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-info btn-fw"><?=$total_ch_ls ?></button></td>
+                            <td><button type="button" class="btn btn-outline-info btn-fw"><?=$dels ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-light btn-rounded btn-fw">Địa Lí </button></td>
-                            <td><button type="button" class="btn btn-outline-light btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-light btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-light btn-fw"><?=$total_ch_dia ?></button></td>
+                            <td><button type="button" class="btn btn-outline-light btn-fw"><?=$dedia ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>
                           <tr>
                             <td><button type="button" class="btn btn-gradient-dark btn-rounded btn-fw"> GDCD </button></td>
-                            <td><button type="button" class="btn btn-outline-dark btn-fw">???</button></td>
-                            <td><button type="button" class="btn btn-outline-dark btn-fw">???</button></td>
+                            <td><button type="button" class="btn btn-outline-dark btn-fw"><?=$total_ch_gdcd ?></button></td>
+                            <td><button type="button" class="btn btn-outline-dark btn-fw"><?=$degdcd ?></button></td>
                             <td> Dec 5, 2017 </td>
                             <td> WD-12345 </td>
                           </tr>

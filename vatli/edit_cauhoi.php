@@ -1,9 +1,10 @@
 <?php 
-  $path = "../";
-  $id= $_GET['id'];
-  require_once $path.'dataconnect/dbconnect.php';
-  $sql = "SELECT * FROM cauhoi_ly where id_cauhoi = $id";
-  $kq = getSimpleQuery($sql);
+$path = "../";
+$id= $_GET['id'];
+$page = $_GET['page'];
+require_once $path.'dataconnect/dbconnect.php';
+$sql = "SELECT * FROM cauhoi_ly where id_cauhoi = $id";
+$kq = getSimpleQuery($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -221,6 +222,7 @@
                 </a>
                 <div class="collapse" id="ui-basic1">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qldethi1.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
@@ -235,9 +237,11 @@
                 </a>
                 <div class="collapse" id="ui-basic2">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="qldethi2.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="qlch2.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="taodethi2.php">Tạo Mới Đề Thi</a></li>
+
                   </ul>
                 </div>
               </li>
@@ -249,6 +253,7 @@
                 </a>
                 <div class="collapse" id="ui-basic3">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../hoahoc/qldethi3.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/qlch3.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../hoahoc/taodethi3.php">Tạo Mới Đề Thi</a></li>
@@ -263,6 +268,7 @@
                 </a>
                 <div class="collapse" id="ui-basic4">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../ngoaingu/qldethi4.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/qlch4.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/themcauhoi4.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../ngoaingu/taodethi4.php">Tạo Mới Đề Thi</a></li>
@@ -277,6 +283,7 @@
                 </a>
                 <div class="collapse" id="ui-basic5">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qldethi5.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/qlch5.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/themcauhoi5.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../sinhhoc/taodethi5.php">Tạo Mới Đề Thi</a></li>
@@ -291,6 +298,7 @@
                 </a>
                 <div class="collapse" id="ui-basic6">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../lichsu/qldethi6.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/qlch6.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/themcauhoi6.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../lichsu/taodethi6.php">Tạo Mới Đề Thi</a></li>
@@ -305,6 +313,7 @@
                 </a>
                 <div class="collapse" id="ui-basic7">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../diali/qldethi7.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/qlch7.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/themcauhoi7.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../diali/taodethi7.php">Tạo Mới Đề Thi</a></li>
@@ -319,6 +328,7 @@
                 </a>
                 <div class="collapse" id="ui-basic8">
                   <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="../gdcd/qldethi8.php">Quản Lý Đề Thi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/qlch8.php">Quản Lý Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/themcauhoi8.php">Thêm Mới Câu Hỏi</a></li>
                     <li class="nav-item"> <a class="nav-link" href="../gdcd/taodethi8.php">Tạo Mới Đề Thi</a></li>
@@ -352,8 +362,10 @@
                       <div class="card-body">
                         <h4 class="card-title">Form Thay Đổi Nội Dung Câu Hỏi</h4>
                         <p class="card-description"> Môn Vật Lý </p>
-                        <form class="forms-sample" method="post" action="xuli_add_cauhoi.php" enctype="multipart/form-data">
+                        <form class="forms-sample" method="post" action="xuli_edit_cauhoi.php" enctype="multipart/form-data">
                           <div class="form-group">
+                            <input type="hidden" name="id_cauhoi" value="<?=$id?>">
+                            <input type="hidden" name="page" value="<?=$page?>">
                             <label for="exampleInputName1">Nội Dung Câu Hỏi</label>
                             <input type="text" name="noidung" class="form-control" value="<?= $kq['cauhoi']; ?>">
                             <?php if(isset($_GET['nd'])){ ?>
@@ -408,6 +420,33 @@
                           </div>
                           <div class="form-group">
                             <label for="exampleSelectGender">Loại Câu Hỏi</label>
+                            <?php 
+                            if ($kq['daodong']>0) {
+                              $loaicau_cu=1;
+                            }
+                            if ($kq['songco']>0) {
+                              $loaicau_cu=2;
+                            }
+                            if ($kq['dien']>0) {
+                              $loaicau_cu=3;
+                            }
+                            if ($kq['machgiaodong']>0) {
+                              $loaicau_cu=4;
+                            }
+                            if ($kq['songanhsang']>0) {
+                              $loaicau_cu=5;
+                            }
+                            if ($kq['luongtu']>0) {
+                              $loaicau_cu=6;
+                            }
+                            if ($kq['hatnhan']>0) {
+                              $loaicau_cu=7;
+                            }
+                            if ($kq['vatly11']>0) {
+                              $loaicau_cu=8;
+                            }
+                            ?>
+                            <input type="hidden" name="loaicau_cu" value="<?=$loaicau_cu?>">
                             <select class="form-control" name="loaicau" id="exampleSelectGender">
                               <option value="1" <?php if($kq['daodong'] > 0){ echo 'selected'; } ?>> Dao động</option>
                               <option value="2" <?php if($kq['songco'] > 0){ echo 'selected'; } ?>> Sóng Cơ</option>
@@ -419,15 +458,23 @@
                               <option value="8" <?php if($kq['vatly11'] > 0){ echo 'selected'; }  ?>> Vật lý 11</option>
                             </select>
                           </div>
-                          
+
                           <div class="form-group">
                             <label> Hình Ảnh </label>
                             <div>
-                            <?php ?>
-                            <img src="<?php echo $kq['hinhanh']; ?>">      
+                              <?php if ($kq['hinhanh']=="") {
+                                echo "<img width='200px' height='150px' src='../img/vatli/default.jpg'>";
+                              } else {
+                                $string1 ="<img  width='200px' height='150px' src='../";
+                                $string2 =" '>";
+                                echo $string1.$kq['hinhanh'].$string2;
+                              }
+                              ?>
+
                             </div>
                             <input type="file" name="image" class="file-upload-default">
                             <div class="input-group col-xs-12">
+                              <input type="hidden" name="linkanhcu" value="<?= $kq['hinhanh']?>">
                               <input type="text" class="form-control file-upload-info" disabled value="<?= $kq['hinhanh']  ?>">
                               <span class="input-group-append">
                                 <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
@@ -438,7 +485,7 @@
                             <?php } ?>
                           </div>
                           <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-                          <button type="reset" class="btn btn-light">Cancel</button>
+                          <button type="button" class="btn btn-light" onclick="location.href='<?=$ADMIN_URL?>vatli/qlch2.php?page=<?=$page?>'">Cancel</button>
                         </form>
                       </div>
                     </div>
@@ -470,6 +517,7 @@
         <script src="../assets/js/off-canvas.js"></script>
         <script src="../assets/js/hoverable-collapse.js"></script>
         <script src="../assets/js/misc.js"></script>
+        <script src="../assets/js/file-upload.js"></script>
         <!-- endinject -->
         <!-- Custom js for this page -->
         <!-- End custom js for this page -->
