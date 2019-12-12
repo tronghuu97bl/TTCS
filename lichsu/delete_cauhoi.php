@@ -6,6 +6,6 @@
     $sql = "delete from cauhoi_ls where id_cauhoi = $id_cauhoi";
     getSimpleQuery($sql);
           
-    header('location: '. $ADMIN_URL . 'vatli/qlch6.php?deletesuccess=true');
+    header('location: '. $ADMIN_URL . 'lichsu/qlch6.php?deletesuccess=true');
     die;
 ?>

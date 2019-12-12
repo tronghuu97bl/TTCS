@@ -4,6 +4,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
     header('location: '. $ADMIN_URL .'hoahoc/qlch3.php');
     die;
 }
+$dangcauhoi=$_POST['dangcauhoi'];
 $ngaythem = date("Y/m/d");
 $noidung = trim($_POST['noidung']);
 $dapanA = $_POST['dapana'];
@@ -79,61 +80,61 @@ if ($filename != "") {
 
 
 if ($loaicau==1) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, sudienli) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',1)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, sudienli, loai_cauhoi) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',1, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==2) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, phanbonhhoahoc) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',2)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, phanbonhhoahoc, loai_cauhoi) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',2, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==3) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, hidrocacbon) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',3)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, hidrocacbon, loai_cauhoi) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',3, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==4) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, este_lipit) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',4)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, este_lipit, loai_cauhoi) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',4, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==5) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, cacbohidrat) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',5)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, cacbohidrat, loai_cauhoi) values (1, '$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',5, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==6) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, amin_protein) values (1,'$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',6)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, amin_protein, loai_cauhoi) values (1,'$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',6, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==7) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, polime) values (1,'$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',7)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, polime, loai_cauhoi) values (1,'$ngaythem', '$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',7, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==8) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, daicuongkimloai) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',8)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, daicuongkimloai, loai_cauhoi) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',8, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==9) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, kimloai) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',9)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, kimloai, loai_cauhoi) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',9, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;
 }
 if ($loaicau==10) {
-    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, nhanbiethoahoc) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',10)";
+    $sql="insert into cauhoi_hoa(ma_monhoc, ngaythem, cauhoi, dapanA, dapanB, dapanC, dapanD, dapandung, dokho, hinhanh, nhanbiethoahoc, loai_cauhoi) values (1,'$ngaythem','$noidung','$dapanA','$dapanB','$dapanC','$dapanD',$dapandung,$dokho,'$filename',10, $dangcauhoi)";
     $run=getSimpleQuery($sql);
     header('location: '. $ADMIN_URL . 'hoahoc/themcauhoi3.php?success=true');
     die;

@@ -4,6 +4,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
     header('location: '. $ADMIN_URL .'vatli/qlch2.php');
     die;
 }
+$dangcauhoi = $_POST['dangcauhoi'];
 $page = $_POST['page'];
 $loaicau_cu = $_POST['loaicau_cu'];
 $id_cauhoi = $_POST['id_cauhoi'];
@@ -83,36 +84,36 @@ if ($filename != "") {
 
 //thay đổi loại câu k thay đổi hình ảnh
 if ($loaicau_cu==1) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, daodong=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, daodong=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==2) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho,  songco=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho,  songco=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==3) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, dien=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, dien=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==4) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, machgiaodong=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, machgiaodong=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==5) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, songanhsang=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, songanhsang=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 
 }
 if ($loaicau_cu==6) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, luongtu=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, luongtu=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==7) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, hatnhan=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, hatnhan=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==8) {
-    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, vatly11=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_ly set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, vatly11=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 
 }

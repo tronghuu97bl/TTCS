@@ -4,6 +4,7 @@ if($_SERVER['REQUEST_METHOD'] != 'POST'){
     header('location: '. $ADMIN_URL .'hoahoc/qlch3.php');
     die;
 }
+$dangcauhoi = $_POST['dangcauhoi'];
 $page = $_POST['page'];
 $loaicau_cu = $_POST['loaicau_cu'];
 $id_cauhoi = $_POST['id_cauhoi'];
@@ -83,44 +84,44 @@ if ($filename != "") {
 
 //thay đổi loại câu k thay đổi hình ảnh
 if ($loaicau_cu==1) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, sudienli=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, sudienli=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==2) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho,  phanbonhhoahoc=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho,  phanbonhhoahoc=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==3) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, hidrocacbon=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, hidrocacbon=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==4) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, este_lipit=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, este_lipit=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==5) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, cacbohidrat =0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, cacbohidrat =0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 
 }
 if ($loaicau_cu==6) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, amin_protein=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, amin_protein=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==7) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, polime=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, polime=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==8) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, daicuongkimloai=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, daicuongkimloai=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==9) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, kimloai=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, kimloai=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 if ($loaicau_cu==10) {
-    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', dapandung=$dapandung, dokho=$dokho, nhanbiethoahoc=0 where id_cauhoi = $id_cauhoi";
+    $sql="update cauhoi_hoa set ngaythem ='$ngaythem', cauhoi='$noidung', dapanA='$dapanA', dapanB='$dapanB', dapanC='$dapanC',dapanD='$dapanD', loai_cauhoi=$dangcauhoi, dapandung=$dapandung, dokho=$dokho, nhanbiethoahoc=0 where id_cauhoi = $id_cauhoi";
     $run=getSimpleQuery($sql);
 }
 

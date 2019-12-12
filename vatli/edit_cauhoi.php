@@ -458,6 +458,25 @@ $kq = getSimpleQuery($sql);
                               <option value="8" <?php if($kq['vatly11'] > 0){ echo 'selected'; }  ?>> Vật lý 11</option>
                             </select>
                           </div>
+                          <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Dạng Câu Hỏi</label>
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios1" value="0" <?php if ($kq['loai_cauhoi']==0){
+                               echo "checked";
+                            } ?>> Lý Thuyết </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios2" value="1" <?php if ($kq['loai_cauhoi']==1) {
+                              echo "checked";
+                            } ?>> Bài Tập </label>
+                          </div>
+                        </div>
+                      </div>
 
                           <div class="form-group">
                             <label> Hình Ảnh </label>

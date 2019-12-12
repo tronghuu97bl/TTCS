@@ -421,6 +421,21 @@
                           <option value="8"> Vật lý 11</option>
                         </select>
                       </div>
+                      <div class="form-group row">
+                        <label class="col-sm-4 col-form-label">Dạng Câu Hỏi</label>
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios1" value="0" checked> Lý Thuyết </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-4">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios2" value="1"> Bài Tập </label>
+                          </div>
+                        </div>
+                      </div>
                       <div class="form-group">
                         <label>Upload Hình Ảnh (Nếu Có)</label>
                         <br>

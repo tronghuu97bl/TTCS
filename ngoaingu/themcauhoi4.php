@@ -353,7 +353,7 @@
                 <div class="card">
                   <div class="card-body">
                     <h4 class="card-title">Form Thêm Mới Câu Hỏi</h4>
-                    <p class="card-description"> Môn Vật Lý </p>
+                    <p class="card-description"> Môn Tiếng Anh </p>
                     <form class="forms-sample" method="post" action="xuli_add_cauhoi.php" enctype="multipart/form-data">
                       <div class="form-group">
                         <label for="exampleInputName1">Nội Dung Câu Hỏi</label>
