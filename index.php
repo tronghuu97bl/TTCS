@@ -33,15 +33,16 @@ require_once 'dataconnect/dbconnect.php';
               </div>
               <h4>Hello! let's get started</h4>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3">
+              <form class="pt-3" action="login.php" method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                  <input type="text" name="acc" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" name="pass" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <div class="mt-3">
-                  <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" href="homepage.php">SIGN IN</a>
+                  <!-- <a class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn" href="homepage.php">SIGN IN</a> -->
+                  <button type="submit" class="btn btn-block btn-gradient-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -75,6 +76,12 @@ require_once 'dataconnect/dbconnect.php';
       <script src="assets/js/off-canvas.js"></script>
       <script src="assets/js/hoverable-collapse.js"></script>
       <script src="assets/js/misc.js"></script>
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+          <?php if(isset($_GET['error']) && $_GET['error'] == true){ ?> 
+            swal('Tên đăng nhập hoặc mật khẩu không đúng!!!.');
+          <?php } ?>       
+        </script>
       <!-- endinject -->
     </body>
     </html>
