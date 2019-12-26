@@ -242,6 +242,7 @@
               </a>
               <div class="collapse" id="ui-basic3">
                 <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="qldethi3.php">Quản Lý Đề Thi</a></li>
                   <li class="nav-item"> <a class="nav-link" href="qlch3.php">Quản Lý Câu Hỏi</a></li>
                   <li class="nav-item"> <a class="nav-link" href="themcauhoi3.php">Thêm Mới Câu Hỏi</a></li>
                   <li class="nav-item"> <a class="nav-link" href="taodethi3.php">Tạo Mới Đề Thi</a></li>

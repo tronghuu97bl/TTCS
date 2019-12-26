@@ -1,8 +1,8 @@
-
 <?php 
 $path = "../";
 require_once $path.'dataconnect/dbconnect.php';
-?>
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -353,121 +353,317 @@ require_once $path.'dataconnect/dbconnect.php';
             </div>
 
             <!-- thêm mới nội dung vào đây -->
-            <div class="row">
-              <div class="col-12 grid-margin stretch-card">
-                <div class="card">
-                  <div class="card-body">
-                    <h4 class="card-title">Form Thêm Mới Câu Hỏi</h4>
-                    <p class="card-description"> Môn Hóa Học </p>
-                    <form class="forms-sample" method="post" action="xuli_add_cauhoi.php" enctype="multipart/form-data">
-                      <div class="form-group">
-                        <label for="exampleInputName1">Nội Dung Câu Hỏi</label>
-                        <input type="text" name="noidung" class="form-control" id="exampleInputName1" placeholder="Nhập nội dung câu hỏi">
-                        <?php if(isset($_GET['nd'])){ ?>
-                          <span class="text-danger"><?= $_GET['nd'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName2">Phương Án A</label>
-                        <input type="text" name="dapana" class="form-control" id="exampleInputName2" placeholder="Nhập phương án A">
-                        <?php if(isset($_GET['a'])){ ?>
-                          <span class="text-danger"><?= $_GET['a'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName3">Phương Án B</label>
-                        <input type="text" name="dapanb" class="form-control" id="exampleInputName3" placeholder="Nhập phương án B">
-                        <?php if(isset($_GET['b'])){ ?>
-                          <span class="text-danger"><?= $_GET['b'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName4">Phương Án C</label>
-                        <input type="text" name="dapanc" class="form-control" id="exampleInputName4" placeholder="Nhập phương án C">
-                        <?php if(isset($_GET['c'])){ ?>
-                          <span class="text-danger"><?= $_GET['c'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleInputName5">Phương Án D</label>
-                        <input type="text" name="dapand" class="form-control" id="exampleInputName5" placeholder="Nhập phương án D">
-                        <?php if(isset($_GET['d'])){ ?>
-                          <span class="text-danger"><?= $_GET['d'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Phương Án Đúng</label>
-                        <select class="form-control" name="dapandung" id="exampleSelectGender">
-                          <option value="1"> Phương án A</option>
-                          <option value="2"> Phương án B</option>
-                          <option value="3"> Phương án C</option>
-                          <option value="4"> Phương án D</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Độ Khó Câu Hỏi</label>
-                        <select class="form-control" name="dokho" id="exampleSelectGender">
-                          <option value="1"> Nhận Biết</option>
-                          <option value="2"> Thông Hiểu</option>
-                          <option value="3"> Vận Dụng Thấp</option>
-                          <option value="4"> Vận Dụng Cao</option>
-                        </select>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleSelectGender">Loại Câu Hỏi</label>
-                        <select class="form-control" name="loaicau" id="exampleSelectGender">
-                          <option value="1"> Sự Điện Li</option>
-                          <option value="2"> Phân Bón Hóa Học</option>
-                          <option value="3"> Hidrocacbon</option>
-                          <option value="4"> Este - Lipit</option>
-                          <option value="5"> Cacbonhiđrat</option>
-                          <option value="6"> Amin - Protein</option>
-                          <option value="7"> Polime</option>
-                          <option value="8"> Đại Cương Kim Loại</option>
-                          <option value="9"> Kim Loại</option>
-                          <option value="10"> Nhận Biết Hóa Học</option>
-                        </select>
-                      </div>
-                      <div class="form-group row">
-                        <label class="col-sm-4 col-form-label">Dạng Câu Hỏi</label>
-                        <div class="col-sm-4">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios1" value="0" checked> Lý Thuyết </label>
-                          </div>
-                        </div>
-                        <div class="col-sm-4">
-                          <div class="form-check">
-                            <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios2" value="1"> Bài Tập </label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label>Upload Hình Ảnh (Nếu Có)</label>
-                        <br>
-                        <img src="../img/default.jpg" alt="" style="max-width:220px;" id="showImage">
-                        <br>
-                        <input type="file" name="image" class="file-upload-default">
-                        <div class="input-group col-xs-12">
-                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                          <span class="input-group-append">
-                            <button class="file-upload-browse btn btn-gradient-primary" type="button">Upload</button>
-                          </span>                             
-                        </div>  
-                        <?php if(isset($_GET['i'])){ ?>
-                          <span class="text-danger"><?= $_GET['i'] ?></span>
-                        <?php } ?>
-                      </div>
-                      <button type="submit" class="btn btn-gradient-primary mr-2">Submit</button>
-                      <button type="reset" class="btn btn-light">Cancel</button>
-                    </form>
+            <div class="">
+              <form class="forms-sample" method="post" action="add_dethi4.php">
+                <div class="form-group">
+                  <label>Tên đề</label>
+                  <div class="input-group col-xs-12">
+                    <input type="text" class="form-control" name="ten" placeholder="Tên đề thi">
+                    <span class="input-group-append">
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Tạo</button>
+                    </span> 
+                    <?php if(isset($_GET['de'])){ ?>
+                      <span class="text-danger"><?= $_GET['de'] ?></span>
+                    <?php } ?>                             
                   </div>
                 </div>
-              </div>
-            </div> 
-   
-          </div>
+                <div class="row">
+                  <div class="col-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 1</label>
+                          <input type="number" class="col-sm-6" name="idc1" placeholder="1">
+                          <?php if(isset($_GET['id1'])){ ?>
+                            <span class="text-danger"><?= $_GET['id1'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 2</label>
+                          <input type="text" class="col-sm-6" name="idc2" placeholder="1">
+                          <?php if(isset($_GET['id2'])){ ?>
+                            <span class="text-danger"><?= $_GET['id2'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 3</label>
+                          <input type="text" class="col-sm-6" name="idc3" placeholder="1">
+                          <?php if(isset($_GET['id3'])){ ?>
+                            <span class="text-danger"><?= $_GET['id3'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 4</label>
+                          <input type="text" class="col-sm-6" name="idc4" placeholder="1">
+                          <?php if(isset($_GET['id4'])){ ?>
+                            <span class="text-danger"><?= $_GET['id4'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 5</label>
+                          <input type="text" class="col-sm-6" name="idc5" placeholder="1">
+                          <?php if(isset($_GET['id5'])){ ?>
+                            <span class="text-danger"><?= $_GET['id5'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 6</label>
+                          <input type="text" class="col-sm-6" name="idc6" placeholder="1">
+                          <?php if(isset($_GET['id6'])){ ?>
+                            <span class="text-danger"><?= $_GET['id6'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 7</label>
+                          <input type="text" class="col-sm-6" name="idc7" placeholder="1">
+                          <?php if(isset($_GET['id7'])){ ?>
+                            <span class="text-danger"><?= $_GET['id7'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 8</label>
+                          <input type="text" class="col-sm-6" name="idc8" placeholder="1">
+                          <?php if(isset($_GET['id8'])){ ?>
+                            <span class="text-danger"><?= $_GET['id8'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 9</label>
+                          <input type="text" class="col-sm-6" name="idc9" placeholder="1">
+                          <?php if(isset($_GET['id9'])){ ?>
+                            <span class="text-danger"><?= $_GET['id9'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 10</label>
+                          <input type="text" class="col-sm-6" name="idc10" placeholder="1">
+                          <?php if(isset($_GET['id10'])){ ?>
+                            <span class="text-danger"><?= $_GET['id10'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 11</label>
+                          <input type="text" class="col-sm-6" name="idc11" placeholder="1">
+                          <?php if(isset($_GET['id11'])){ ?>
+                            <span class="text-danger"><?= $_GET['id11'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 12</label>
+                          <input type="text" class="col-sm-6" name="idc12" placeholder="1">
+                          <?php if(isset($_GET['id12'])){ ?>
+                            <span class="text-danger"><?= $_GET['id12'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 13</label>
+                          <input type="text" class="col-sm-6" name="idc13" placeholder="1">
+                          <?php if(isset($_GET['id13'])){ ?>
+                            <span class="text-danger"><?= $_GET['id13'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 14</label>
+                          <input type="text" class="col-sm-6" name="idc14" placeholder="1">
+                          <?php if(isset($_GET['id14'])){ ?>
+                            <span class="text-danger"><?= $_GET['id14'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 15</label>
+                          <input type="text" class="col-sm-6" name="idc15" placeholder="1">
+                          <?php if(isset($_GET['id15'])){ ?>
+                            <span class="text-danger"><?= $_GET['id15'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 16</label>
+                          <input type="text" class="col-sm-6" name="idc16" placeholder="1">
+                          <?php if(isset($_GET['id16'])){ ?>
+                            <span class="text-danger"><?= $_GET['id16'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 17</label>
+                          <input type="text" class="col-sm-6" name="idc17" placeholder="1">
+                          <?php if(isset($_GET['id17'])){ ?>
+                            <span class="text-danger"><?= $_GET['id17'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 18</label>
+                          <input type="text" class="col-sm-6" name="idc18" placeholder="1">
+                          <?php if(isset($_GET['id18'])){ ?>
+                            <span class="text-danger"><?= $_GET['id18'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 19</label>
+                          <input type="text" class="col-sm-6" name="idc19" placeholder="1">
+                          <?php if(isset($_GET['id19'])){ ?>
+                            <span class="text-danger"><?= $_GET['id19'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 20</label>
+                          <input type="text" class="col-sm-6" name="idc20" placeholder="1">
+                          <?php if(isset($_GET['id20'])){ ?>
+                            <span class="text-danger"><?= $_GET['id20'] ?></span>
+                          <?php } ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 21</label>
+                          <input type="text" class="col-sm-6" name="idc21" placeholder="1">
+                          <?php if(isset($_GET['id21'])){ ?>
+                            <span class="text-danger"><?= $_GET['id21'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 22</label>
+                          <input type="text" class="col-sm-6" name="idc22" placeholder="1">
+                          <?php if(isset($_GET['id22'])){ ?>
+                            <span class="text-danger"><?= $_GET['id22'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 23</label>
+                          <input type="text" class="col-sm-6" name="idc23" placeholder="1">
+                          <?php if(isset($_GET['id23'])){ ?>
+                            <span class="text-danger"><?= $_GET['id23'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 24</label>
+                          <input type="text" class="col-sm-6" name="idc24" placeholder="1">
+                          <?php if(isset($_GET['id24'])){ ?>
+                            <span class="text-danger"><?= $_GET['id24'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 25</label>
+                          <input type="text" class="col-sm-6" name="idc25" placeholder="1">
+                          <?php if(isset($_GET['id25'])){ ?>
+                            <span class="text-danger"><?= $_GET['id25'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 26</label>
+                          <input type="text" class="col-sm-6" name="idc26" placeholder="1">
+                          <?php if(isset($_GET['id26'])){ ?>
+                            <span class="text-danger"><?= $_GET['id26'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 27</label>
+                          <input type="text" class="col-sm-6" name="idc27" placeholder="1">
+                          <?php if(isset($_GET['id27'])){ ?>
+                            <span class="text-danger"><?= $_GET['id27'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 28</label>
+                          <input type="text" class="col-sm-6" name="idc28" placeholder="1">
+                          <?php if(isset($_GET['id28'])){ ?>
+                            <span class="text-danger"><?= $_GET['id28'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 29</label>
+                          <input type="text" class="col-sm-6" name="idc29" placeholder="1">
+                          <?php if(isset($_GET['id29'])){ ?>
+                            <span class="text-danger"><?= $_GET['id29'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 30</label>
+                          <input type="text" class="col-sm-6" name="idc30" placeholder="1">
+                          <?php if(isset($_GET['id30'])){ ?>
+                            <span class="text-danger"><?= $_GET['id30'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 31</label>
+                          <input type="text" class="col-sm-6" name="idc31" placeholder="1">
+                          <?php if(isset($_GET['id31'])){ ?>
+                            <span class="text-danger"><?= $_GET['id31'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 32</label>
+                          <input type="text" class="col-sm-6" name="idc32" placeholder="1">
+                          <?php if(isset($_GET['id32'])){ ?>
+                            <span class="text-danger"><?= $_GET['id32'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 33</label>
+                          <input type="text" class="col-sm-6" name="idc33" placeholder="1">
+                          <?php if(isset($_GET['id33'])){ ?>
+                            <span class="text-danger"><?= $_GET['id33'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 34</label>
+                          <input type="text" class="col-sm-6" name="idc34" placeholder="1">
+                          <?php if(isset($_GET['id34'])){ ?>
+                            <span class="text-danger"><?= $_GET['id34'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 35</label>
+                          <input type="text" class="col-sm-6" name="idc35" placeholder="1">
+                          <?php if(isset($_GET['id35'])){ ?>
+                            <span class="text-danger"><?= $_GET['id35'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 36</label>
+                          <input type="text" class="col-sm-6" name="idc36" placeholder="1">
+                          <?php if(isset($_GET['id36'])){ ?>
+                            <span class="text-danger"><?= $_GET['id36'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 37</label>
+                          <input type="text" class="col-sm-6" name="idc37" placeholder="1">
+                          <?php if(isset($_GET['id37'])){ ?>
+                            <span class="text-danger"><?= $_GET['id37'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 38</label>
+                          <input type="text" class="col-sm-6" name="idc38" placeholder="1">
+                          <?php if(isset($_GET['id38'])){ ?>
+                            <span class="text-danger"><?= $_GET['id38'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 39</label>
+                          <input type="text" class="col-sm-6" name="idc39" placeholder="1">
+                          <?php if(isset($_GET['id39'])){ ?>
+                            <span class="text-danger"><?= $_GET['id39'] ?></span>
+                          <?php } ?>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-sm-6 col-form-label">ID Câu 40</label>
+                          <input type="text" class="col-sm-6" name="idc40" placeholder="1">
+                          <?php if(isset($_GET['id40'])){ ?>
+                            <span class="text-danger"><?= $_GET['id40'] ?></span>
+                          <?php } ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div> 
+              </div>  
+            </div>
           <!-- content-wrapper ends -->
           <!-- partial:../../partials/_footer.html -->
           <footer class="footer">
@@ -492,19 +688,17 @@ require_once $path.'dataconnect/dbconnect.php';
     <script src="../assets/js/off-canvas.js"></script>
     <script src="../assets/js/hoverable-collapse.js"></script>
     <script src="../assets/js/misc.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+          <?php if(isset($_GET['success']) && $_GET['success'] == true){ ?> 
+            swal('Tạo mới đề thi thành công.');
+          <?php } ?>
+          <?php if(isset($_GET['notsuccess']) && $_GET[' notsuccess'] == true){ ?> 
+            swal('Tạo đề không thành công :(.');
+          <?php } ?>
+        </script>
     <!-- endinject -->
     <!-- Custom js for this page -->
-    <script src="../assets/js/file-upload.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  
-    <script type="text/javascript">
-    
-      <?php if(isset($_GET['success']) && $_GET['success'] == true){ ?> 
-        swal('Thêm mới câu hỏi thành công.');
-      <?php }else if(isset($_GET['notsuccess']) && $_GET['notsuccess'] == true){ ?>
-        swal('Thêm mới câu hỏi không thành công!!!.');
-      <?php } ?>
-    </script>
     <!-- End custom js for this page -->
   </body>
 </html>

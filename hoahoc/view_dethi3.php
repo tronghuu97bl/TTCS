@@ -1,26 +1,131 @@
 <?php 
 $path = "../";
 require_once $path.'dataconnect/dbconnect.php';
-  // tìm tổng số bản ghi
-$sql = "SELECT count(id_de) as total FROM de_hoa";
+$STT=1;
+$id_de = $_GET['id'];
+$page = $_GET['page'];
+$sql = "SELECT * from de_hoa where id_de = $id_de";
 $run = getSimpleQuery($sql);
-$total_records = $run['total'];
-  // tìm current_page and limit
-$current_page = isset($_GET['page']) ? $_GET['page'] : 1;
-$limit = 20;
-  //tính toán total_page and start
-$total_page = ceil($total_records / $limit);
-if ($current_page > $total_page){
-  $current_page = $total_page;
-}else
-if ($current_page < 1){
-  $current_page = 1;
-} 
-$start = ($current_page - 1) * $limit;
-
-$sql = "select * from de_hoa limit $start, $limit";
-$kq = getSimpleQuery($sql, true);
-$STT=1*($current_page-1)*20 + 1;
+$idc1 = $run['idcau1'];
+$idc2 = $run['idcau2'];
+$idc3 = $run['idcau3'];
+$idc4 = $run['idcau4'];
+$idc5 = $run['idcau5'];
+$idc6 = $run['idcau6'];
+$idc7 = $run['idcau7'];
+$idc8 = $run['idcau8'];
+$idc9 = $run['idcau9'];
+$idc10 = $run['idcau10'];
+$idc11 = $run['idcau11'];
+$idc12 = $run['idcau12'];
+$idc13 = $run['idcau13'];
+$idc14 = $run['idcau14'];
+$idc15 = $run['idcau15'];
+$idc16 = $run['idcau16'];
+$idc17 = $run['idcau17'];
+$idc18 = $run['idcau18'];
+$idc19 = $run['idcau19'];
+$idc20 = $run['idcau20'];
+$idc21 = $run['idcau21'];
+$idc22 = $run['idcau22'];
+$idc23 = $run['idcau23'];
+$idc24 = $run['idcau24'];
+$idc25 = $run['idcau25'];
+$idc26 = $run['idcau26'];
+$idc27 = $run['idcau27'];
+$idc28 = $run['idcau28'];
+$idc29 = $run['idcau29'];
+$idc30 = $run['idcau30'];
+$idc31 = $run['idcau31'];
+$idc32 = $run['idcau32'];
+$idc33 = $run['idcau33'];
+$idc34 = $run['idcau34'];
+$idc35 = $run['idcau35'];
+$idc36 = $run['idcau36'];
+$idc37 = $run['idcau37'];
+$idc38 = $run['idcau38'];
+$idc39 = $run['idcau39'];
+$idc40 = $run['idcau40'];
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc1";
+$kq1 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc2";
+$kq2 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc3";
+$kq3 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc4";
+$kq4 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc5";
+$kq5 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc6";
+$kq6 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc7";
+$kq7 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc8";
+$kq8 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc9";
+$kq9 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc10";
+$kq10 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc11";
+$kq11 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc12";
+$kq12 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc13";
+$kq13 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc14";
+$kq14 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc15";
+$kq15 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc16";
+$kq16 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc17";
+$kq17 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc18";
+$kq18 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc19";
+$kq19 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc20";
+$kq20 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc21";
+$kq21 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc22";
+$kq22 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc23";
+$kq23 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc24";
+$kq24 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc25";
+$kq25 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc26";
+$kq26 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc27";
+$kq27 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc28";
+$kq28 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc29";
+$kq29 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc30";
+$kq30 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc31";
+$kq31 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc32";
+$kq32= getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc33";
+$kq33 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc34";
+$kq34 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc35";
+$kq35 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc36";
+$kq36 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc37";
+$kq37 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc38";
+$kq38 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc39";
+$kq39 = getSimpleQuery($sql);
+$sql = "SELECT * from cauhoi_hoa where id_cauhoi = $idc40";
+$kq40 = getSimpleQuery($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -380,76 +485,221 @@ $STT=1*($current_page-1)*20 + 1;
                         <div class="table-responsive">
 
                           <table class="table-bordered" width=device-width >
-                            <nav aria-label="...">
-                              <ul class="pagination">
-                                <?php
-                                if ($current_page > 1 && $total_page > 1){ 
-                                  echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.($current_page-1).'">'."Previous".'</a></li>';
-                                }
-                                for ($i = 1; $i <= $total_page; $i++){
-                              // Nếu là trang hiện tại thì hiển thị thẻ span
-                              // ngược lại hiển thị thẻ a
-                                  if ($i == $current_page){
-                                    echo '<li class="page-item active"><a class="page-link" href="qldethi3.php?page='.$i.'">'.$i.'</a></li>';
-                                  }
-                                  else{
-                                    echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.$i.'">'.$i.'</a></li>';
-                                  }
-                                }
-                                if ($current_page < $total_page && $total_page > 1){
-                                  echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.($current_page+1).'">'."Next".'</a></li>';
-                                }
-                                ?>
-                              </ul>
-                            </nav>
+                            
                             <thead>
                               <tr>
                                 <th width="50px"> STT </th>
-                                <th width="800px"> Tên Đề Thi</th>
-                                <th width="100px"> Ngày Thêm </th>
-                                <th width="50px"> Xem </th>
-                                <th width="50px"> Xóa </th>
+                                <th width="100px"> ID</th>
+                                <th width="1000px">Nội Dung Câu Hỏi </th>
                               </tr>
                             </thead>
                             <tbody>
-                              <?php foreach ($kq as $key): ?>
                                 <tr>
                                   <td> <?= $STT++ ?> </td>
-                                  <td> <?= $key['tendethi'] ?> </td>
-                                  <td> <?= $key['ngaytao'] ?> </td>
-                                  </td>
-                                  <td><button type="button" class="btn-sm btn-gradient-primary btn-rounded btn-fw" onclick="location.href='<?= $ADMIN_URL?>hoahoc/view_dethi3.php?id=<?= $key['id_de']?>'" >Xem</button></td>
-                                  <td> <button class="btn-sm btn-gradient-primary btn-rounded btn-fw btn-remove" href="javascript:;" linkurl="<?= $ADMIN_URL?>hoahoc/xoa_dethi3.php?id=<?= $key['id_de']?>">xóa</button> </td>
+                                  <td> <?= $kq1['id_cauhoi']?> </td>
+                                  <td> <?= $kq1['cauhoi'] ?> </td>
                                 </tr>
-
-                              <?php endforeach ?>    
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq2['id_cauhoi']?> </td>
+                                  <td> <?= $kq2['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq3['id_cauhoi']?> </td>
+                                  <td> <?= $kq3['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq4['id_cauhoi']?> </td>
+                                  <td> <?= $kq4['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq5['id_cauhoi']?> </td>
+                                  <td> <?= $kq5['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq6['id_cauhoi']?> </td>
+                                  <td> <?= $kq6['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq7['id_cauhoi']?> </td>
+                                  <td> <?= $kq7['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq8['id_cauhoi']?> </td>
+                                  <td> <?= $kq8['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq9['id_cauhoi']?> </td>
+                                  <td> <?= $kq9['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq10['id_cauhoi']?> </td>
+                                  <td> <?= $kq10['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq11['id_cauhoi']?> </td>
+                                  <td> <?= $kq11['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq12['id_cauhoi']?> </td>
+                                  <td> <?= $kq12['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq13['id_cauhoi']?> </td>
+                                  <td> <?= $kq13['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq14['id_cauhoi']?> </td>
+                                  <td> <?= $kq14['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq15['id_cauhoi']?> </td>
+                                  <td> <?= $kq15['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq16['id_cauhoi']?> </td>
+                                  <td> <?= $kq16['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq17['id_cauhoi']?> </td>
+                                  <td> <?= $kq17['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq18['id_cauhoi']?> </td>
+                                  <td> <?= $kq18['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq19['id_cauhoi']?> </td>
+                                  <td> <?= $kq19['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq20['id_cauhoi']?> </td>
+                                  <td> <?= $kq20['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq21['id_cauhoi']?> </td>
+                                  <td> <?= $kq21['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq22['id_cauhoi']?> </td>
+                                  <td> <?= $kq22['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq23['id_cauhoi']?> </td>
+                                  <td> <?= $kq23['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq24['id_cauhoi']?> </td>
+                                  <td> <?= $kq24['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq25['id_cauhoi']?> </td>
+                                  <td> <?= $kq25['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq26['id_cauhoi']?> </td>
+                                  <td> <?= $kq26['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq27['id_cauhoi']?> </td>
+                                  <td> <?= $kq27['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq28['id_cauhoi']?> </td>
+                                  <td> <?= $kq28['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq29['id_cauhoi']?> </td>
+                                  <td> <?= $kq29['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq30['id_cauhoi']?> </td>
+                                  <td> <?= $kq30['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq31['id_cauhoi']?> </td>
+                                  <td> <?= $kq31['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq32['id_cauhoi']?> </td>
+                                  <td> <?= $kq32['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq33['id_cauhoi']?> </td>
+                                  <td> <?= $kq33['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq34['id_cauhoi']?> </td>
+                                  <td> <?= $kq34['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq35['id_cauhoi']?> </td>
+                                  <td> <?= $kq35['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq36['id_cauhoi']?> </td>
+                                  <td> <?= $kq36['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq37['id_cauhoi']?> </td>
+                                  <td> <?= $kq37['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq38['id_cauhoi']?> </td>
+                                  <td> <?= $kq38['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq39['id_cauhoi']?> </td>
+                                  <td> <?= $kq39['cauhoi'] ?> </td>
+                                </tr>
+                                <tr>
+                                  <td> <?= $STT++ ?> </td>
+                                  <td> <?= $kq40['id_cauhoi']?> </td>
+                                  <td> <?= $kq40['cauhoi'] ?> </td>
+                                </tr>    
                             </tbody>
 
                           </table>
                           <br>
                           <!-- phân trang -->
-                          <nav aria-label="...">
-                            <ul class="pagination">
-                              <?php
-                              if ($current_page > 1 && $total_page > 1){ 
-                                echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.($current_page-1).'">'."Previous".'</a></li>';
-                              }
-                              for ($i = 1; $i <= $total_page; $i++){
-                              // Nếu là trang hiện tại thì hiển thị thẻ span
-                              // ngược lại hiển thị thẻ a
-                                if ($i == $current_page){
-                                  echo '<li class="page-item active"><a class="page-link" href="qldethi3.php?page='.$i.'">'.$i.'</a></li>';
-                                }
-                                else{
-                                  echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.$i.'">'.$i.'</a></li>';
-                                }
-                              }
-                              if ($current_page < $total_page && $total_page > 1){
-                                echo '<li class="page-item"><a class="page-link" href="qldethi3.php?page='.($current_page+1).'">'."Next".'</a></li>';
-                              }
-                              ?>
-                            </ul>
-                          </nav>
+                          
                         </div>
                         
                       </div>
