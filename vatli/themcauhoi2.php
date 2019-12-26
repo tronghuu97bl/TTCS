@@ -1,3 +1,7 @@
+<?php 
+$path = "../";
+require_once $path.'dataconnect/dbconnect.php';
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

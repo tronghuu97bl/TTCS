@@ -1,0 +1,54 @@
+<?php 
+require_once '../dataconnect/dbconnect.php';
+if($_SERVER['REQUEST_METHOD'] != 'POST'){
+    header('location: '. $ADMIN_URL .'vatli/add_dethi3.php');
+    die;
+}
+$ten = $_POST['ten'];
+$ngaytao = date("Y/m/d");
+$idc1 = $_POST['idc1'];
+$idc2 = $_POST['idc2'];
+$idc3 = $_POST['idc3'];
+$idc4 = $_POST['idc4'];
+$idc5 = $_POST['idc5'];
+$idc6 = $_POST['idc6'];
+$idc7 = $_POST['idc7'];
+$idc8 = $_POST['idc8'];
+$idc9 = $_POST['idc9'];
+$idc10 = $_POST['idc10'];
+$idc11 = $_POST['idc11'];
+$idc12 = $_POST['idc12'];
+$idc13 = $_POST['idc13'];
+$idc14 = $_POST['idc14'];
+$idc15 = $_POST['idc15'];
+$idc16 = $_POST['idc16'];
+$idc17 = $_POST['idc17'];
+$idc18 = $_POST['idc18'];
+$idc19 = $_POST['idc19'];
+$idc20 = $_POST['idc20'];
+$idc21 = $_POST['idc21'];
+$idc22 = $_POST['idc22'];
+$idc23 = $_POST['idc23'];
+$idc24 = $_POST['idc24'];
+$idc25 = $_POST['idc25'];
+$idc26 = $_POST['idc26'];
+$idc27 = $_POST['idc27'];
+$idc28 = $_POST['idc28'];
+$idc29 = $_POST['idc29'];
+$idc30 = $_POST['idc30'];
+$idc31 = $_POST['idc31'];
+$idc32 = $_POST['idc32'];
+$idc33 = $_POST['idc33'];
+$idc34 = $_POST['idc34'];
+$idc35 = $_POST['idc35'];
+$idc36 = $_POST['idc36'];
+$idc37 = $_POST['idc37'];
+$idc38 = $_POST['idc38'];
+$idc39 = $_POST['idc39'];
+$idc40 = $_POST['idc40'];
+$sql="INSERT INTO `de_ly`(`ma_monhoc`, `tendethi`, `ngaytao`, `idcau1`, `idcau2`, `idcau3`, `idcau4`, `idcau5`, `idcau6`, `idcau7`, `idcau8`, `idcau9`, `idcau10`, `idcau11`, `idcau12`, `idcau13`, `idcau14`, `idcau15`, `idcau16`, `idcau17`, `idcau18`, `idcau19`, `idcau20`, `idcau21`, `idcau22`, `idcau23`, `idcau24`, `idcau25`, `idcau26`, `idcau27`, `idcau28`, `idcau29`, `idcau30`, `idcau31`, `idcau32`, `idcau33`, `idcau34`, `idcau35`, `idcau36`, `idcau37`, `idcau38`, `idcau39`, `idcau40`) VALUES (2,'$ten','$ngaytao','$idc1','$idc2','$idc3','$idc4','$idc5','$idc6','$idc7','$idc8','$idc9','$idc10','$idc11','$idc12','$idc13','$idc14','$idc15','$idc16','$idc17','$idc18','$idc19','$idc20','$idc21','$idc22','$idc23','$idc24','$idc25','$idc26','$idc27','$idc28','$idc29','$idc30','$idc31','$idc32','$idc33','$idc34','$idc35','$idc36','$idc37','$idc38','$idc39','$idc40')";
+$run=getSimpleQuery($sql);
+echo $sql;
+header('location: '. $ADMIN_URL . 'vatli/taodethi2.php?success=true');
+    die;
+?>

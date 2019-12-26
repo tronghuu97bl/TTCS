@@ -1,3 +1,8 @@
+<?php 
+$path = "../";
+require_once $path.'dataconnect/dbconnect.php';
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -23,8 +28,8 @@
       <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="homepage.php"><img src="../assets/images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="homepage.php"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="../homepage.php"><img src="../assets/images/logo.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="../homepage.php"><img src="../assets/images/logo-mini.svg" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -48,7 +53,7 @@
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">
-                  <p class="mb-1 text-black">Tư Mã Trọng Đạt</p>
+                  <p class="mb-1 text-black"><?php echo $_SESSION['login']['username']; ?></p>
                 </div>
               </a>
               <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -181,7 +186,7 @@
                     <!--change to offline or busy as needed-->
                   </div>
                   <div class="nav-profile-text d-flex flex-column">
-                    <span class="font-weight-bold mb-2">Tư Mã Trọng Đạt</span>
+                    <span class="font-weight-bold mb-2"><?php echo $_SESSION['login']['username']; ?></span>
                     <span class="text-secondary text-small">Project Manager</span>
                   </div>
                   <i class="mdi mdi-bookmark-check text-success nav-profile-badge"></i>
@@ -214,10 +219,10 @@
                 </a>
                 <div class="collapse" id="ui-basic1">
                   <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qldethi1.php">Quản Lý Đề Thi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/qlch1.php">Quản Lý Câu Hỏi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="../toanhoc/taodethi1.php">Tạo Mới Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="qldethi1.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="qlch1.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="themcauhoi1.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="taodethi1.php">Tạo Mới Đề Thi</a></li>
                   </ul>
                 </div>
               </li>
@@ -229,10 +234,10 @@
                 </a>
                 <div class="collapse" id="ui-basic2">
                   <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="qldethi2.php">Quản Lý Đề Thi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="qlch2.php">Quản Lý Câu Hỏi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
-                    <li class="nav-item"> <a class="nav-link" href="taodethi2.php">Tạo Mới Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/qldethi2.php">Quản Lý Đề Thi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/qlch2.php">Quản Lý Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/themcauhoi2.php">Thêm Mới Câu Hỏi</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="../vatli/taodethi2.php">Tạo Mới Đề Thi</a></li>
 
                   </ul>
                 </div>
@@ -348,6 +353,187 @@
             </div>
 
             <!-- thêm mới nội dung vào đây -->
+            <div>
+              <!-- <form class="forms-sample" method="post" action="add_dethi3.php"> -->
+                <div class="form-group">
+                  <input type="file" name="image" class="file-upload-default">
+                  <div class="input-group col-xs-12">
+                    <input type="text" class="form-control"  placeholder="Tạo đề thi thủ công">
+                    <span class="input-group-append">
+                      <a class="btn btn-gradient-primary mr-2" href="add_dethi3.php">Tạo</a>
+                      <!-- <button type="submit" class="btn btn-gradient-primary mr-2">Tạo</button> -->
+                    </span>                             
+                  </div>
+                </div>
+              <!-- </form> -->
+            </div>
+            <div class="row">
+              <div class="col-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Tạo Theo Cấu Trúc Của Bộ</h4>
+                    <p class="card-description">Cấu Trúc Môn Toán Học </p>
+                    <form class="forms-sample" method="post" action="add_dethi.php" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <!-- <label for="exampleTextarea1">Cấu Trúc</label> -->
+                        <!-- <textarea class="form-control" placeholder="adsad \r\n sađâssd" id="exampleTextarea1" rows="4">
+                        </textarea> -->
+                        <table class="table table-hover" width=device-width>
+                          <thead>
+                            <tr>
+                              <th>Chuyên Đề</th>
+                              <th>Số Câu</th>
+                              <th>Mức Độ</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Khảo Sát Hàm Số</td>
+                              <td>10</td>
+                              <td>2/4/3/1</td>
+                            </tr>
+                            <tr>
+                              <td>Hàm Số Mũ - Logarit</td>
+                              <td>7</td>
+                              <td>1/1/4/1</td>
+                            </tr>
+                            <tr>
+                              <td>Nguyên Hàm - Tích Phân</td>
+                              <td>7</td>
+                              <td>2/1/3/1</td>
+                            </tr>
+                            <tr>
+                              <td>Số Phức</td>
+                              <td>4</td>
+                              <td>1/1/1/1</td>
+                            </tr>
+                            <tr>
+                              <td>Lượng Giác</td>
+                              <td>1</td>
+                              <td>0/0/1/0</td>
+                            </tr>
+                            <tr>
+                              <td>Hình Không Gian</td>
+                              <td>3</td>
+                              <td>0/1/1/1</td>
+                            </tr>
+                            <tr>
+                              <td>Hệ Phương Trình</td>
+                              <td>5</td>
+                              <td>2/2/1/0</td>
+                            </tr>
+                            <tr>
+                              <td>Bất Phương Trình</td>
+                              <td>2</td>
+                              <td>1/0/0/1</td>
+                            </tr>
+                            tr>
+                              <td>Tổ Hợp - Xác Suất</td>
+                              <td>3</td>
+                              <td>1/1/1/0</td>
+                            </tr>
+                            tr>
+                              <td>Mặt Phẳng Oxyz</td>
+                              <td>8</td>
+                              <td>2/2/3/1</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Tên Đề Thi</label>
+                        <input type="text" name="tendethi" class="form-control" id="exampleInputName1" placeholder="Nhập tên đề thi">
+                        <?php if(isset($_GET['de'])){ ?>
+                          <span class="text-danger"><?= $_GET['de'] ?></span>
+                        <?php } ?>
+                      </div> 
+
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Tạo</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">Tạo Theo Cấu Trúc Tùy Chỉnh</h4>
+                    <p class="card-description"> Môn Vật Lý </p>
+                    <form class="forms-sample" method="post" action="add_dethi2.php" enctype="multipart/form-data">
+                      <div class="form-group row">
+                        <label class="col-sm-3 col-form-label">Dạng Câu Hỏi</label>
+                        <div class="col-sm-3">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios1" value="0" checked> L.Thuyết </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios2" value="1"> Bài Tập </label>
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="form-check">
+                            <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="dangcauhoi" id="membershipRadios2" value="1"> Hỗn Hợp </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Khảo Sát Hàm Số</label>
+                        <input type="text" class="col-sm-6" name="loai1" placeholder="7">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Logarit</label>
+                        <input type="text" class="col-sm-6" name="loai2" placeholder="5">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Nguyên Hàm - Tích Phân</label>
+                        <input type="text" class="col-sm-6" name="loai3" placeholder="7">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Số Phức</label>
+                        <input type="text" class="col-sm-6" name="loai4" placeholder="3">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Lượng Giác</label>
+                        <input type="text" class="col-sm-6" name="loai5" placeholder="5">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Hình Không Gian</label>
+                        <input type="text" class="col-sm-6" name="loai6" placeholder=4>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Hệ Phương Trình</label>
+                        <input type="text" class="col-sm-6" name="loai7" placeholder="5">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Bất Phương Trình</label>
+                        <input type="text" class="col-sm-6" name="loai8" placeholder="4">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Tổ Hợp - Xác Suất</label>
+                        <input type="text" class="col-sm-6" name="loai9" placeholder="4">
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-6 col-form-label">Số Câu Mặt Phẳng Oxyz</label>
+                        <input type="text" class="col-sm-6" name="loai10" placeholder="4">
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputName1">Tên Đề Thi</label>
+                        <input type="text" name="tendethi" class="form-control" id="exampleInputName1" placeholder="Nhập tên đề thi">
+                        <?php if(isset($_GET['de'])){ ?>
+                          <span class="text-danger"><?= $_GET['de'] ?></span>
+                        <?php } ?>
+                      </div>
+
+                      <button type="submit" class="btn btn-gradient-primary mr-2">Tạo</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div> 
    
           </div>
           <!-- content-wrapper ends -->
@@ -374,6 +560,15 @@
     <script src="../assets/js/off-canvas.js"></script>
     <script src="../assets/js/hoverable-collapse.js"></script>
     <script src="../assets/js/misc.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript">
+          <?php if(isset($_GET['success']) && $_GET['success'] == true){ ?> 
+            swal('Tạo mới đề thi thành công.');
+          <?php } ?>
+          <?php if(isset($_GET['notsuccess']) && $_GET[' notsuccess'] == true){ ?> 
+            swal('Tạo đề không thành công :(.');
+          <?php } ?>
+        </script>
     <!-- endinject -->
     <!-- Custom js for this page -->
     <!-- End custom js for this page -->
